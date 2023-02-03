@@ -1,0 +1,23 @@
+
+h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+.course-col{
+    margin:0 7px;
+    flex-basis: 31%;
+    background:#fff3f3;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding:20px 12px;
+    box-sizing: border-box; 
+    transition: 0.5s;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+h4{
+    text-align: center;
+    font-weight: 600;
+    margin:10px 0; 
+}

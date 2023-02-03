@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    {% include 'storeapp/inc/navbar.html'%}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            <h2 class="text-center mt-3">About Us</h2><hr>
+                <div class="row">
+                    {% for p in  principal  %}
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            
+                                <div class="card-body shadow">
+                                    <div class="principal-image">
+                                        <img src="{{p.principal_image.url}}" alt=""/>
+                                    </div>  
+                                    <h3 class="fw-bold">{{p.name}}</h3> 
+                                    <p>{{p.discription}}</p> 
+                                </div> 
+                        
+                        </div>   
+                    </div>    
+                    {% endfor %}
+                </div>
+                <h2 class="mt-2 mb-2  fw-bold">Teacher list:</h2>
+                <div class="row">
+                    {% for t in  teacher  %}
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            
+                                <div class="card-body shadow">
+                                    <div class="principal-image">
+                                        <img src="{{t.image.url}}" alt="" class="m-4" style="width:180px"/>
+                                    </div>  
+                                    <h5 class="fw-12px">{{t.name}}</h5> <hr>
+                                    <p>{{t.des}}</p>
+                                    <h6 class="fw-12px">{{t.tittle}}</h6> 
+                                    <button class="btn btn-primary float-end">details</button>
+                                </div> 
+                        
+                        </div>   
+                    </div>    
+                    {% endfor %}
+                </div
+            </div
+        </div
+    </div
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
